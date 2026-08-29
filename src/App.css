@@ -24,6 +24,33 @@
   color: white;
 }
 
+.about-me {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.experience {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title
+  {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+.subtitle
+{
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
 .App-link {
   color: #61dafb;
 }
