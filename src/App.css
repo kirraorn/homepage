@@ -88,15 +88,15 @@ body {
 }
 
 
-/* ---------------- FLOWY WAVE DIVIDER ---------------- */
+/*   DIVIDER  */
 .hero-wave-divider {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100vw;               /* Forces full screen width */
-  margin-left: calc(-50vw + 50%); /* Handles any horizontal scroll container offsets */
-  height: 35px;               /* Low profile: won't cover your photo */
+  width: 100vw;               
+  margin-left: calc(-50vw + 50%); 
+  height: 35px;              
   overflow: hidden;
   line-height: 0;
   z-index: 2;
@@ -179,7 +179,7 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center;
   border: 2px solid #ffffff;
   flex-shrink: 0;
 }

@@ -49,7 +49,7 @@ function App() {
               src={`${process.env.PUBLIC_URL}/images/headshot.jpeg`}alt="Kirra Orndorff" className="headshot-img" />
             <div className="about-text">
               <p>
-                Hi! I'm an incoming senior studying Computer Science at Florida State University (GPA 4.0). I specialize in architecting full-stack applications, enterprise data pipelines, and AI integrations.
+                Hi! I'm a senior studying Computer Science at Florida State University (GPA 4.0). I specialize in architecting full-stack applications, enterprise data pipelines, and AI integrations.
               </p>
               <p>
                 Outside of engineering and building software solutions, I am deeply passionate about hiking, travel, and cooking.
