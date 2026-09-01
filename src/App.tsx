@@ -4,29 +4,49 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      {/* Hero Header */}
-      <header 
-  className="hero-header"
-  style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/stars.jpeg)` }}
->
+<div className="App">
+      
+  {/* Hero Header */}
+  <header className="hero-header">
+    <h1 className="hero-name">Kirra Orndorff</h1>
+    <p className="hero-tagline">
+      Computer Science Senior at Florida State University focused on software engineering, cloud builds, and data systems.</p>
 
-  <h1 className="hero-name">Kirra Orndorff</h1>
-  <p className="hero-tagline">
-    Computer Science Senior at Florida State University focused on software engineering, cloud builds, and data systems.
-  </p>
-</header>
+  <div className="hero-wave-divider">
+    <svg
+      viewBox="0 0 1440 60"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient id="waveFade" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="rgba(10, 23, 18, 0)" />
+          <stop offset="60%" stopColor="rgba(10, 23, 18, 0.65)" />
+          <stop offset="100%" stopColor="rgba(10, 23, 18, 0.95)" />
+        </linearGradient>
+      </defs>
+
+      
+      <path
+        d="M0,20 Q360,5 720,25 T1440,15 L1440,60 L0,60 Z"
+        fill="rgba(156, 197, 165, 0.12)" />
+      
+      <path
+        d="M0,28 Q360,45 720,18 T1440,30 L1440,60 L0,60 Z"
+        fill="url(#waveFade)" />
+        </svg>
+      </div>
+    </header>
 
       <main className="main-content">
+       
         {/* About Me */}
         <section className="section">
           <h2 className="section-title">About Me</h2>
           <div className="about-card">
             <img
-              src={`${process.env.PUBLIC_URL}/headshot.jpeg`}
-              alt="Kirra Orndorff"
-              className="headshot-img"
-            />
+              src={`${process.env.PUBLIC_URL}/images/headshot.jpeg`}alt="Kirra Orndorff" className="headshot-img" />
             <div className="about-text">
               <p>
                 Hi! I'm an incoming senior studying Computer Science at Florida State University (GPA 4.0). I specialize in architecting full-stack applications, enterprise data pipelines, and AI integrations.
@@ -57,7 +77,7 @@ function App() {
                 </ul>
               </div>
               <div className="media-frame">
-                <img src={`${process.env.PUBLIC_URL}/tampa.jpeg`} alt="FSU ITS Workspace" />
+                <img src={`${process.env.PUBLIC_URL}/images/fsuits2.jpeg`} alt="FSU ITS Workspace" />
               </div>
             </div>
 
@@ -75,7 +95,7 @@ function App() {
                 </ul>
               </div>
               <div className="media-frame">
-                <img src={`${process.env.PUBLIC_URL}/inn2.jpeg`} alt="Innovation Hub Collaboration" />
+                <img src={`${process.env.PUBLIC_URL}/images/inn2.jpeg`} alt="Innovation Hub Collaboration" />
               </div>
             </div>
 
@@ -93,7 +113,7 @@ function App() {
                 </ul>
               </div>
               <div className="media-frame">
-                <img src={`${process.env.PUBLIC_URL}/ushunger.jpeg`} alt="Data Analytics Project" />
+                <img src={`${process.env.PUBLIC_URL}/images/ushunger.jpeg`} alt="Data Analytics Project" />
               </div>
             </div>
 
@@ -108,7 +128,7 @@ function App() {
             {/* MediScribe */}
             <div className="project-card">
               <div className="project-image-box">
-                <img src={`${process.env.PUBLIC_URL}/maker.jpeg`} alt="MediScribe AWS Project" />
+                <img src={`${process.env.PUBLIC_URL}/images/maker.jpeg`} alt="MediScribe AWS Project" />
               </div>
               <h3>MediScribe</h3>
               <p className="project-subtitle">AWS AI Maker Challenge · February 2026</p>
@@ -128,7 +148,7 @@ function App() {
             {/* Hot Take */}
             <div className="project-card">
               <div className="project-image-box">
-                <img src={`${process.env.PUBLIC_URL}/innovators.jpeg`} alt="Hot Take Social App" />
+                <img src={`${process.env.PUBLIC_URL}/images/innovators.jpeg`} alt="Hot Take Social App" />
               </div>
               <h3>Hot Take Social Media App</h3>
               <p className="project-subtitle">FSU Innovators · August 2025 – May 2026</p>
@@ -144,7 +164,7 @@ function App() {
               </div>
             </div>
 
-            {/* Clinic Management System (No Image) */}
+            {/* Clinic Management System */}
             <div className="project-card">
               <h3>Clinic Management System</h3>
               <p className="project-subtitle">Full-Stack Programming with C# · August 2025 – December 2025</p>
@@ -160,7 +180,7 @@ function App() {
               </div>
             </div>
 
-            {/* Concert & Venue Database (No Image) */}
+            {/* Concert & Venue Database */}
             <div className="project-card">
               <h3>Concert &amp; Venue Database</h3>
               <p className="project-subtitle">Theory of Databases · January 2026 – May 2026</p>
@@ -180,27 +200,47 @@ function App() {
           </div>
         </section>
 
-        {/* Campus Involvement */}
+       {/* Campus Involvement */}
         <section className="section">
-          <h2 className="section-title">Campus Involvement</h2>
+          <div className="section-header">
+            <h2 className="section-title">Campus Involvement</h2>
+          </div>
           <div className="involvement-grid">
             
+            {/* ColorStack FSU */}
             <div className="involvement-card">
-              <h4>Vice President of Programming</h4>
-              <p className="involvement-org">ColorStack FSU · January 2026 – Present</p>
-              <ul className="bullets">
-                <li>Orchestrated programming for 8+ professional and technical events, designing workshops in GitHub, AWS deployment, and interview prep.</li>
-                <li>Spearheaded career readiness panels, resume teardowns, and career fair prep to equip computing students with actionable strategies.</li>
-              </ul>
+              <div className="media-frame involvement-media">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/colorstack.png`}
+                  alt="ColorStack FSU Leadership"
+                />
+              </div>
+              <div className="involvement-content">
+                <h4>Vice President of Programming</h4>
+                <p className="involvement-org">ColorStack FSU · January 2026 – Present</p>
+                <ul className="bullets">
+                  <li>Orchestrated programming for 8+ professional and technical events, designing workshops in GitHub, AWS deployment, and technical interview preparation.</li>
+                  <li>Spearheaded career readiness panels, resume teardowns, and campus engagement activities to equip computing students with actionable career strategies.</li>
+                </ul>
+              </div>
             </div>
 
+            {/* STARS Alliance at FSU */}
             <div className="involvement-card">
-              <h4>Member</h4>
-              <p className="involvement-org">STARS Alliance at FSU · January 2026 – Present</p>
-              <ul className="bullets">
-                <li>Facilitated technical workshops and peer-mentoring sessions to broaden diversity in computing for K-12 and undergraduate students.</li>
-                <li>Collaborated with leadership to coordinate campus recruitment and professional development events.</li>
-              </ul>
+              <div className="media-frame involvement-media">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/stars.jpeg`}
+                  alt="STARS Alliance FSU Mentoring"
+                />
+              </div>
+              <div className="involvement-content">
+                <h4>Member</h4>
+                <p className="involvement-org">STARS Alliance at FSU · January 2026 – Present</p>
+                <ul className="bullets">
+                  <li>Facilitated technical workshops and peer-mentoring sessions to broaden participation and diversity in computing for K-12 and undergraduate students.</li>
+                  <li>Collaborated with a student leadership team to coordinate campus recruitment and professional development events.</li>
+                </ul>
+              </div>
             </div>
 
           </div>
