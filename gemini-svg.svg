@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3600" width="100%" height="100%">
+  <defs>
+    <!-- Deep Misty Pine & Moss Gradient -->
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1f18"/>
+      <stop offset="25%" stop-color="#08140f"/>
+      <stop offset="50%" stop-color="#12241c"/>
+      <stop offset="75%" stop-color="#0a1712"/>
+      <stop offset="100%" stop-color="#050d09"/>
+    </linearGradient>
+
+    <!-- Muted Canopy Glows -->
+    <radialGradient id="canopyLight1" cx="20%" cy="12%" r="45%">
+      <stop offset="0%" stop-color="#84a98c" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#52796f" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="canopyLight2" cx="85%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#95d5b2" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#2d6a4f" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="canopyLight3" cx="15%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="#b7b7a4" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#52796f" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 1. Muted Cream Woodland Dogwood Flower -->
+    <g id="dogwoodFlower">
+      <path d="M0,0 C-12,-35 12,-35 0,0" fill="#f4f1de" opacity="0.85"/>
+      <path d="M0,0 C-35,-12 -35,12 0,0" fill="#ede8d0" opacity="0.8"/>
+      <path d="M0,0 C-18,32 0,35 0,0" fill="#e0dcbe" opacity="0.75"/>
+      <path d="M0,0 C18,32 0,35 0,0" fill="#ede8d0" opacity="0.8"/>
+      <path d="M0,0 C35,-12 35,12 0,0" fill="#f4f1de" opacity="0.85"/>
+      <circle cx="0" cy="0" r="4.5" fill="#a3b18a"/>
+    </g>
+
+    <!-- 2. Wild Sage Jasmine -->
+    <g id="sageJasmine">
+      <path d="M0,0 C-10,-26 10,-26 0,0" fill="#e9edc9" opacity="0.85"/>
+      <path d="M0,0 C-26,-10 -26,10 0,0" fill="#dfe4bd" opacity="0.8"/>
+      <path d="M0,0 C-14,22 0,26 0,0" fill="#ccd5ae" opacity="0.75"/>
+      <path d="M0,0 C14,22 0,26 0,0" fill="#dfe4bd" opacity="0.8"/>
+      <path d="M0,0 C26,-10 26,10 0,0" fill="#e9edc9" opacity="0.85"/>
+      <circle cx="0" cy="0" r="3.5" fill="#84a98c"/>
+    </g>
+
+    <!-- 3. Climbing Forest Vine & Wild Fern -->
+    <g id="forestVine" fill="none">
+      <path d="M0,0 Q100,160 40,360 T120,720 T30,1050" stroke="#52796f" stroke-width="3" opacity="0.45"/>
+      
+      <!-- Fern/Leaf clusters -->
+      <path d="M35,80 Q75,55 80,85 Q60,105 35,80" fill="#354f52" opacity="0.6"/>
+      <path d="M85,220 Q125,195 130,225 Q110,245 85,220" fill="#2f3e46" opacity="0.7"/>
+      <path d="M20,440 Q-20,415 -25,445 Q-5,465 20,440" fill="#354f52" opacity="0.6"/>
+      <path d="M95,600 Q135,575 140,605 Q120,625 95,600" fill="#52796f" opacity="0.55"/>
+      <path d="M50,850 Q90,825 95,855 Q75,875 50,850" fill="#354f52" opacity="0.6"/>
+
+      <!-- Flowers -->
+      <g transform="translate(80,85) scale(0.95)"><use href="#dogwoodFlower"/></g>
+      <g transform="translate(130,225) scale(0.8) rotate(25)"><use href="#sageJasmine"/></g>
+      <g transform="translate(-25,445) scale(0.9)"><use href="#dogwoodFlower"/></g>
+      <g transform="translate(140,605) scale(0.85) rotate(-15)"><use href="#sageJasmine"/></g>
+      <g transform="translate(95,855) scale(1)"><use href="#dogwoodFlower"/></g>
+      <g transform="translate(20,1020) scale(0.8)"><use href="#sageJasmine"/></g>
+    </g>
+
+    <!-- 4. Drifting Ivory Petal -->
+    <g id="ivoryPetal">
+      <path d="M0,0 C15,-10 22,8 0,18 C-15,8 -8,-10 0,0" fill="#f4f1de" opacity="0.35"/>
+    </g>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1440" height="3600" fill="url(#forestGrad)" />
+
+  <!-- Ambient Shading -->
+  <rect width="1440" height="3600" fill="url(#canopyLight1)" />
+  <rect width="1440" height="3600" fill="url(#canopyLight2)" />
+  <rect width="1440" height="3600" fill="url(#canopyLight3)" />
+
+  <!-- Top Foliage -->
+  <g transform="translate(10, -20) scale(1.3)"><use href="#forestVine"/></g>
+  <g transform="translate(1430, 20) scale(-1.25, 1.25)"><use href="#forestVine"/></g>
+  <g transform="translate(280, 160) scale(1) rotate(15)"><use href="#dogwoodFlower"/></g>
+  <g transform="translate(1160, 220) scale(0.9) rotate(-20)"><use href="#sageJasmine"/></g>
+
+  <!-- Mid-Page Elements -->
+  <g transform="translate(-20, 980) scale(1.35) rotate(6)"><use href="#forestVine"/></g>
+  <g transform="translate(1450, 1150) scale(-1.3, 1.3) rotate(-8)"><use href="#forestVine"/></g>
+
+  <!-- Lower Page Elements -->
+  <g transform="translate(15, 1950) scale(1.35)"><use href="#forestVine"/></g>
+  <g transform="translate(1425, 2100) scale(-1.35, 1.35)"><use href="#forestVine"/></g>
+
+  <!-- Footer Elements -->
+  <g transform="translate(-10, 2850) scale(1.35)"><use href="#forestVine"/></g>
+  <g transform="translate(1440, 2800) scale(-1.35, 1.35)"><use href="#forestVine"/></g>
+
+  <!-- Soft Drifting Canopy Petals -->
+  <g transform="translate(420, 300) rotate(25) scale(1)"><use href="#ivoryPetal"/></g>
+  <g transform="translate(980, 520) rotate(-35) scale(0.9)"><use href="#ivoryPetal"/></g>
+  <g transform="translate(310, 1280) rotate(45) scale(1.1)"><use href="#ivoryPetal"/></g>
+  <g transform="translate(1120, 1600) rotate(10) scale(0.85)"><use href="#ivoryPetal"/></g>
+  <g transform="translate(380, 2250) rotate(-20) scale(1)"><use href="#ivoryPetal"/></g>
+  <g transform="translate(1020, 2550) rotate(60) scale(1.1)"><use href="#ivoryPetal"/></g>
+  <g transform="translate(460, 3150) rotate(30) scale(0.9)"><use href="#ivoryPetal"/></g>
+</svg>
