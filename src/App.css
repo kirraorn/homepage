@@ -20,9 +20,11 @@
   padding: 0;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
   min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,16 +32,17 @@ body {
   color: var(--text-main);
   font-family: var(--font-sans);
   line-height: 1.7;
-  min-height: 100vh;
 }
 
 /* ---------------- CONTINUOUS SCROLLING BACKGROUND ---------------- */
 .App {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  /* Seamless tint + background covering the entire page length */
+  overflow-x: hidden;
+  /* Seamless tint + background covering entire height */
   background-image: 
     linear-gradient(
       180deg, 
@@ -47,16 +50,16 @@ body {
       rgba(10, 23, 18, 0.6) 45%, 
       rgba(10, 23, 18, 0.8) 100%
     ),
-    url('/public/gemini-svg.svg'); /* If inside public/images, use url('/images/gemini-svg.svg') */
-  background-size: cover;       /* Ensures full coverage all the way past the footer */
+    url('/public/gemini-svg.svg');
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: scroll; /* Scrolls naturally with page content */
+  background-attachment: scroll;
 }
 
 /* ---------------- HERO HEADER ---------------- */
 .hero-header {
-  padding: 7rem 2rem 4.5rem 2rem; /* Reduced bottom padding */
+  padding: 7rem 2rem 4.5rem 2rem;
   text-align: center;
   position: relative;
   background-image: url('/public/images/stadium.jpeg');
@@ -82,21 +85,18 @@ body {
   z-index: 1;
 }
 
-.hero-header > * {
+.hero-header > *:not(.hero-wave-divider) {
   position: relative;
   z-index: 2;
 }
 
-
-/*   DIVIDER  */
+/* ---------------- DIVIDER ---------------- */
 .hero-wave-divider {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
-  width: 100vw;               
-  margin-left: calc(-50vw + 50%); 
-  height: 35px;              
+  width: 100%;
+  height: 35px;
   overflow: hidden;
   line-height: 0;
   z-index: 2;
@@ -112,7 +112,7 @@ body {
 .hero-course-tag {
   font-family: var(--font-sub);
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   color: var(--accent-sage);
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
@@ -121,15 +121,16 @@ body {
 .hero-name {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(2.4rem, 6.5vw, 4.5rem);
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 0.8rem;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero-tagline {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2.8vw, 1.05rem);
   max-width: 650px;
   margin: 0 auto;
   font-weight: 300;
@@ -140,11 +141,11 @@ body {
   max-width: 950px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem 5rem 2rem;
+  padding: 0 1.5rem 5rem 1.5rem;
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -155,7 +156,7 @@ body {
 .section-title {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 4.5vw, 2.2rem);
   color: #ffffff;
   margin-bottom: 2rem;
   text-align: left;
@@ -168,6 +169,7 @@ body {
   border-radius: 24px;
   padding: 2.5rem;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   gap: 2.5rem;
   align-items: center;
@@ -208,6 +210,7 @@ body {
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: grid;
   grid-template-columns: 1fr 220px;
   gap: 1.8rem;
@@ -290,8 +293,9 @@ body {
 /* ---------------- PROJECTS ---------------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 1.8rem;
+  width: 100%;
 }
 
 .project-card {
@@ -302,6 +306,7 @@ body {
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -312,7 +317,7 @@ body {
 
 .project-image-box {
   width: 100%;
-  height: 190px;
+  height: 150px;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--border-color);
@@ -370,8 +375,9 @@ body {
 /* ---------------- CAMPUS INVOLVEMENT ---------------- */
 .involvement-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 1.8rem;
+  width: 100%;
 }
 
 .involvement-card {
@@ -407,7 +413,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%; /* Adjust vertical alignment as needed */
+  object-position: center 35%;
   transition: transform 0.4s ease;
 }
 
@@ -433,6 +439,7 @@ body {
 .involvement-card .bullets {
   margin-top: 0.2rem;
 }
+
 /* ---------------- CONTACT & FOOTER ---------------- */
 .contact-box {
   background: var(--bg-card);
@@ -441,8 +448,10 @@ body {
   padding: 3.5rem 2rem;
   text-align: center;
   max-width: 700px;
+  width: 100%;
   margin: 0 auto;
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .contact-box p {
@@ -495,22 +504,69 @@ body {
 
 .footer {
   text-align: center;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 1.5rem;
   color: var(--text-muted);
   font-size: 0.85rem;
   border-top: 1px solid var(--border-color);
 }
 
-/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+/* ---------------- RESPONSIVE BREAKPOINTS (MOBILE & TABLET) ---------------- */
 @media (max-width: 800px) {
+  .hero-header {
+    padding: 5.5rem 1.25rem 3.5rem 1.25rem;
+  }
+
+  .main-content {
+    padding: 0 1.25rem 4rem 1.25rem;
+  }
+
   .about-card {
     flex-direction: column;
     text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
   }
+
+  .headshot-img {
+    width: 140px;
+    height: 140px;
+  }
+
   .experience-card {
     grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.2rem;
   }
-  .media-frame {
-    height: 180px;
+
+  .experience-card .media-frame {
+    order: -1;
+    height: 160px;
+  }
+
+  .project-card,
+  .involvement-card {
+    padding: 1.5rem;
+  }
+
+  .project-image-box {
+    height: 130px;
+  }
+
+  .involvement-media {
+    height: 140px;
+  }
+
+  .contact-box {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
