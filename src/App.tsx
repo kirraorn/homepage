@@ -211,7 +211,7 @@ function App() {
             <div className="involvement-card">
               <div className="media-frame involvement-media">
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/colorstack.png`}
+                  src={`${process.env.PUBLIC_URL}/images/colorstack.jpeg`}
                   alt="ColorStack FSU Leadership"
                 />
               </div>
