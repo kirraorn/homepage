@@ -95,7 +95,7 @@ function App() {
                 </ul>
               </div>
               <div className="media-frame">
-                <img src={`${process.env.PUBLIC_URL}/images/inn2.jpeg`} alt="Innovation Hub Collaboration" />
+                <img src={`${process.env.PUBLIC_URL}/images/synapse.jpeg`} alt="Innovation Hub Collaboration" />
               </div>
             </div>
 
@@ -112,7 +112,7 @@ function App() {
                   <li>Built and integrated an internal AWS-backed AI agent capable of parsing raw data to generate end-to-end, multi-page visual reports, streamlining executive decision-making.</li>
                 </ul>
               </div>
-              <div className="media-frame">
+              <div className="media-frame2">
                 <img src={`${process.env.PUBLIC_URL}/images/ushunger.jpeg`} alt="Data Analytics Project" />
               </div>
             </div>
