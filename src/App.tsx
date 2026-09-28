@@ -10,7 +10,7 @@ function App() {
   <header className="hero-header">
     <h1 className="hero-name">Kirra Orndorff</h1>
     <p className="hero-tagline">
-      Computer Science Senior at Florida State University focused on software engineering, cloud builds, and data systems.</p>
+      CS Senior at FSU | Building at the intersection of full-stack engineering and AI, with an eye toward tech leadership</p>
 
   <div className="hero-wave-divider">
     <svg
@@ -49,10 +49,10 @@ function App() {
               src={`${process.env.PUBLIC_URL}/images/headshot.jpeg`}alt="Kirra Orndorff" className="headshot-img" />
             <div className="about-text">
               <p>
-                Hi! I'm a senior studying Computer Science at Florida State University (GPA 4.0). I specialize in architecting full-stack applications, enterprise data pipelines, and AI integrations.
+                Hi! I’m a senior studying Computer Science at Florida State University (GPA 4.0). Right now, I spend most of my time building full-stack applications and experimenting with AI integrations. Post-grad, I’m eager to jump into the AI landscape as an engineer, with an eye toward technical management down the line so I can help guide both the systems and the people building them.
               </p>
               <p>
-                Outside of engineering and building software solutions, I am deeply passionate about hiking, travel, and cooking.
+               Beyond tech, I love hiking trails, traveling, and experimenting in the kitchen.
               </p>
             </div>
           </div>
@@ -125,6 +125,25 @@ function App() {
           <h2 className="section-title">Projects</h2>
           <div className="projects-grid">
             
+            {/* Hot Take */}
+            <div className="project-card">
+              <div className="project-image-box">
+                <img src={`${process.env.PUBLIC_URL}/images/innovators.jpeg`} alt="Hot Take Social App" />
+              </div>
+              <h3>Hot Take Social Media App</h3>
+              <p className="project-subtitle">FSU Innovators · August 2025 – May 2026</p>
+              <ul className="bullets">
+                <li>Architected a full-stack social media application utilizing React Native for a responsive mobile frontend and a Python/SQL backend to manage high-concurrency user data.</li>
+                <li>Developed a robust API layer to bridge the mobile interface with a relational SQL database, optimizing data retrieval for 5+ real-time features including live voting and dynamic user feeds.</li>
+              </ul>
+              <div className="tag-list">
+                <span className="tag">React Native</span>
+                <span className="tag">Python</span>
+                <span className="tag">SQL</span>
+                <span className="tag">REST APIs</span>
+              </div>
+            </div>
+            
             {/* MediScribe */}
             <div className="project-card">
               <div className="project-image-box">
@@ -145,22 +164,20 @@ function App() {
               </div>
             </div>
 
-            {/* Hot Take */}
+            {/* Concert & Venue Database */}
             <div className="project-card">
-              <div className="project-image-box">
-                <img src={`${process.env.PUBLIC_URL}/images/innovators.jpeg`} alt="Hot Take Social App" />
-              </div>
-              <h3>Hot Take Social Media App</h3>
-              <p className="project-subtitle">FSU Innovators · August 2025 – May 2026</p>
+              <h3>Concert &amp; Venue Database</h3>
+              <p className="project-subtitle">Theory of Databases · January 2026 – May 2026</p>
               <ul className="bullets">
-                <li>Architected a full-stack social media application utilizing React Native for a responsive mobile frontend and a Python/SQL backend to manage high-concurrency user data.</li>
-                <li>Developed a robust API layer to bridge the mobile interface with a relational SQL database, optimizing data retrieval for 5+ real-time features including live voting and dynamic user feeds.</li>
+                <li>Led a 4-person team to create a concert archiving platform with a MySQL backend and Flask API, featuring a responsive HTML/CSS/JavaScript frontend to visualize artist tour histories and venue data.</li>
+                <li>Designed advanced query logic in Python and SQL to identify &quot;rare&quot; songs (played in &lt;10% of setlists) and unannounced surprise guests, delivering statistical performance insights.</li>
               </ul>
               <div className="tag-list">
-                <span className="tag">React Native</span>
+                <span className="tag">MySQL</span>
                 <span className="tag">Python</span>
-                <span className="tag">SQL</span>
-                <span className="tag">REST APIs</span>
+                <span className="tag">Flask</span>
+                <span className="tag">JavaScript</span>
+                <span className="tag">SQL Analytics</span>
               </div>
             </div>
 
@@ -180,22 +197,40 @@ function App() {
               </div>
             </div>
 
-            {/* Concert & Venue Database */}
+            {/* Custom Unix-Style Shell */}
             <div className="project-card">
-              <h3>Concert &amp; Venue Database</h3>
-              <p className="project-subtitle">Theory of Databases · January 2026 – May 2026</p>
+              <h3>Custom Unix-Style Shell</h3>
+              <p className="project-subtitle"> Operating Systems · August 2025 – December 2025</p>
               <ul className="bullets">
-                <li>Led a 4-person team to create a concert archiving platform with a MySQL backend and Flask API, featuring a responsive HTML/CSS/JavaScript frontend to visualize artist tour histories and venue data.</li>
-                <li>Designed advanced query logic in Python and SQL to identify &quot;rare&quot; songs (played in &lt;10% of setlists) and unannounced surprise guests, delivering statistical performance insights.</li>
+                <li>Engineered a Unix-style shell that successfully handled 100% of standard I/O redirection and IPC commands by leveraging Linux system calls (fork, exec, wait) and C++ for process control.</li>
+                <li>Gained hands-on experience with process control, inter-process communication, and Linux system calls while strengthening teamwork and debugging skills.</li>
               </ul>
               <div className="tag-list">
-                <span className="tag">MySQL</span>
-                <span className="tag">Python</span>
-                <span className="tag">Flask</span>
-                <span className="tag">JavaScript</span>
-                <span className="tag">SQL Analytics</span>
+                <span className="tag">C++</span>
+                <span className="tag">Operating Systems</span>
+                <span className="tag">Linux</span>
+                <span className="tag">System Calls</span> 
               </div>
             </div>
+
+            {/* Dynamic Student Management System */}
+            <div className="project-card">
+              <h3>Dynamic Student Management System</h3>
+              <p className="project-subtitle"> Data Structures and Algorithms · January 2025 – May 2025</p>
+              <ul className="bullets">
+                <li>Developed a dynamic student management system in C++ using nested classes and objects.</li>
+                <li>Implemented features to store and manage student data, including dynamic memory allocation for efficient data handling; The project reinforced object-oriented programming principles, focusing on class composition, encapsulation, and memory management.</li>
+
+              </ul>
+              <div className="tag-list">
+                <span className="tag">C++</span>
+                <span className="tag">Data Structures</span>
+                <span className="tag">Object-Oriented Programming</span>
+                <span className="tag">Memory Management</span>
+              </div>
+            </div>
+
+            
 
           </div>
         </section>
