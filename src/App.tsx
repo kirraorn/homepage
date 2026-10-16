@@ -72,8 +72,8 @@ function App() {
                 </div>
                 <p className="company-name">Florida State University ITS</p>
                 <ul className="bullets">
-                  <li>Supported university-wide AI product roadmaps by tracking milestones, gathering user requirements, and analyzing platform usage metrics to guide feature updates.</li>
-                  <li>Drove AI tool adoption across campus by translating complex technical concepts into clear educational resources and synthesizing user feedback for leadership.</li>
+                  <li>Supporting university-wide AI product roadmaps by tracking milestones, gathering user requirements, and analyzing platform usage metrics to guide feature updates.</li>
+                  <li>Driving AI tool adoption across campus by translating complex technical concepts into clear educational resources and synthesizing user feedback for leadership.</li>
                 </ul>
               </div>
               <div className="media-frame">
@@ -90,8 +90,8 @@ function App() {
                 </div>
                 <p className="company-name">FSU Innovation Hub</p>
                 <ul className="bullets">
-                  <li>Directed full-stack development of an AI academic hub, designing the Next.js, FastAPI, and Supabase/PostgreSQL architecture with OpenAI syllabus parsing pipelines.</li>
-                  <li>Led a multidisciplinary student developer team from concept to delivery, managing Agile sprint backlogs in Jira, code reviews on GitHub, technical workshops, and product roadmaps.</li>
+                  <li>Directing full-stack development of an AI academic hub, designing the Next.js, FastAPI, and Supabase/PostgreSQL architecture with OpenAI syllabus parsing pipelines.</li>
+                  <li>Leading a multidisciplinary student developer team from concept to delivery, managing Agile sprint backlogs in Jira, code reviews on GitHub, technical workshops, and product roadmaps.</li>
                 </ul>
               </div>
               <div className="media-frame">
@@ -123,13 +123,73 @@ function App() {
         {/* Projects */}
         <section className="section">
           <h2 className="section-title">Projects</h2>
+          <h3 className="project-section-title">Current Projects</h3>
           <div className="projects-grid">
+            <div className="project-card">
+              <div className="project-content">
+                <h3>Synapse</h3>
+                <p className="project-subtitle">FSU Innovation Hub · August 2026 – Present</p>
+                <ul className="bullets">
+                  <li>Building an AI syllabus parser using the OpenAI API (gpt-4o-mini) that extracts prerequisites, due dates, grade breakdowns, and office hours from PDFs into structured JSON, powering automatic calendar generation.</li>
+                  <li>Developing a full-stack platform with a Next.js/TypeScript frontend, FastAPI backend, and Supabase-managed PostgreSQL database, implementing authentication, real-time WebSocket course chat channels, and a study group finder.</li>
+            
+                </ul>
+                <div className="tag-list">
+                  <span className="tag">Next.js</span>
+                  <span className="tag">FastAPI</span>
+                  <span className="tag">Supabase</span>
+                  <span className="tag">OpenAI</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-content">
+                <h3>NASA OMNI Solar Wind Clustering</h3>
+                <p className="project-subtitle">Data Mining · August 2026 – Present</p>
+                <ul className="bullets">
+                  <li>Architecting an automated Python data mining pipeline processing 26,000+ hourly NASA OMNI records, with data interpolation and multi-scale rolling-window feature engineering.</li>
+                  <li>Optimizing unsupervised clustering models through k-Means parameter sweeps (k=2 to 10) and Davies-Bouldin index evaluation to isolate distinct solar wind regimes.</li>
+                </ul>
+                <div className="tag-list">
+                  <span className="tag">Python</span>
+                  <span className="tag">Data Mining</span>
+                  <span className="tag">k-Means</span>
+                  <span className="tag">Time Series</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-content">
+                <h3>ECHO: Engine Health Prognostics</h3>
+                <p className="project-subtitle">Projects in Data Science · August 2026 – Present</p>
+                <ul className="bullets">
+                  <li>Implementing the NASA C-MAPSS Dataset to create a remaining-useful-life prediction framework for jet engines, benchmarking Random Forest and XGBoost against Temporal Transformer and Mamba models on multi-sensor time series from 500+ simulated engines across six operating conditions.</li>
+                  <li>Designing phase- and regime-specific Mondrian conformal calibration with a cost-benefit decision layer, converting uncertainty bounds into breakeven maintenance thresholds and evaluating decisions across 1×–20× cost ratios.</li>
+                </ul>
+                <div className="tag-list">
+                  <span className="tag">Python</span>
+                  <span className="tag">XGBoost</span>
+                  <span className="tag">Transformers</span>
+                  <span className="tag">Mamba</span>
+                  <span className="tag">Conformal Prediction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="project-section-title past-projects-title">Past Projects</h3>
+          <div className="projects-grid past-projects">
             
             {/* Hot Take */}
-            <div className="project-card">
+            <details className="past-project">
+              <summary><span>Hot Take Social Media App</span><span className="expand-label">Expand project</span><span className="preview-tags"><span>React Native</span><span>Python</span><span>SQL</span></span></summary>
+              <div className="past-project-content"><div className="project-card">
               <div className="project-image-box">
                 <img src={`${process.env.PUBLIC_URL}/images/innovators.jpeg`} alt="Hot Take Social App" />
               </div>
+              <div className="project-content">
               <h3>Hot Take Social Media App</h3>
               <p className="project-subtitle">FSU Innovators · August 2025 – May 2026</p>
               <ul className="bullets">
@@ -142,13 +202,18 @@ function App() {
                 <span className="tag">SQL</span>
                 <span className="tag">REST APIs</span>
               </div>
-            </div>
+              </div>
+            </div></div>
+            </details>
             
             {/* MediScribe */}
-            <div className="project-card">
+            <details className="past-project">
+              <summary><span>MediScribe</span><span className="expand-label">Expand project</span><span className="preview-tags"><span>Next.js</span><span>Claude</span><span>Amazon Transcribe</span></span></summary>
+              <div className="past-project-content"><div className="project-card">
               <div className="project-image-box">
                 <img src={`${process.env.PUBLIC_URL}/images/maker.jpeg`} alt="MediScribe AWS Project" />
               </div>
+              <div className="project-content">
               <h3>MediScribe</h3>
               <p className="project-subtitle">AWS AI Maker Challenge · February 2026</p>
               <ul className="bullets">
@@ -162,10 +227,15 @@ function App() {
                 <span className="tag">Amazon S3</span>
                 <span className="tag">SQL</span>
               </div>
-            </div>
+              </div>
+            </div></div>
+            </details>
 
             {/* Concert & Venue Database */}
-            <div className="project-card">
+            <details className="past-project">
+              <summary><span>Concert &amp; Venue Database</span><span className="expand-label">Expand project</span><span className="preview-tags"><span>MySQL</span><span>Python</span><span>Flask</span></span></summary>
+              <div className="past-project-content"><div className="project-card">
+              <div className="project-content">
               <h3>Concert &amp; Venue Database</h3>
               <p className="project-subtitle">Theory of Databases · January 2026 – May 2026</p>
               <ul className="bullets">
@@ -179,10 +249,15 @@ function App() {
                 <span className="tag">JavaScript</span>
                 <span className="tag">SQL Analytics</span>
               </div>
-            </div>
+              </div>
+            </div></div>
+            </details>
 
             {/* Clinic Management System */}
-            <div className="project-card">
+            <details className="past-project">
+              <summary><span>Clinic Management System</span><span className="expand-label">Expand project</span><span className="preview-tags"><span>C#</span><span>.NET MAUI</span><span>Mobile Dev</span></span></summary>
+              <div className="past-project-content"><div className="project-card">
+              <div className="project-content">
               <h3>Clinic Management System</h3>
               <p className="project-subtitle">Full-Stack Programming with C# · August 2025 – December 2025</p>
               <ul className="bullets">
@@ -195,10 +270,15 @@ function App() {
                 <span className="tag">Mobile Dev</span>
                 <span className="tag">UI/UX</span>
               </div>
-            </div>
+              </div>
+            </div></div>
+            </details>
 
             {/* Custom Unix-Style Shell */}
-            <div className="project-card">
+            <details className="past-project">
+              <summary><span>Custom Unix-Style Shell</span><span className="expand-label">Expand project</span><span className="preview-tags"><span>C++</span><span>Linux</span><span>System Calls</span></span></summary>
+              <div className="past-project-content"><div className="project-card">
+              <div className="project-content">
               <h3>Custom Unix-Style Shell</h3>
               <p className="project-subtitle"> Operating Systems · August 2025 – December 2025</p>
               <ul className="bullets">
@@ -211,11 +291,16 @@ function App() {
                 <span className="tag">Linux</span>
                 <span className="tag">System Calls</span> 
               </div>
-            </div>
+              </div>
+            </div></div>
+            </details>
 
             {/* Dynamic Student Management System */}
-            <div className="project-card">
-              <h3>Dynamic Student Management System</h3>
+            <details className="past-project">
+              <summary><span>Dynamic Student System</span><span className="expand-label">Expand project</span><span className="preview-tags"><span>C++</span><span>Data Structures</span><span>Memory Management</span></span></summary>
+              <div className="past-project-content"><div className="project-card">
+              <div className="project-content">
+              <h3>Dynamic Student System</h3>
               <p className="project-subtitle"> Data Structures and Algorithms · January 2025 – May 2025</p>
               <ul className="bullets">
                 <li>Developed a dynamic student management system in C++ using nested classes and objects.</li>
@@ -228,7 +313,9 @@ function App() {
                 <span className="tag">Object-Oriented Programming</span>
                 <span className="tag">Memory Management</span>
               </div>
-            </div>
+              </div>
+            </div></div>
+            </details>
 
             
 
