@@ -5,7 +5,13 @@ import "./App.css";
 function App() {
   return (
 <div className="App">
-      
+  <nav className="top-nav" aria-label="Main navigation">
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#involvement">Campus Involvement</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   {/* Hero Header */}
   <header className="hero-header">
     <h1 className="hero-name">Kirra Orndorff</h1>
@@ -59,7 +65,7 @@ function App() {
         </section>
 
         {/* Experience */}
-        <section className="section">
+        <section className="section" id="experience">
           <h2 className="section-title">Experience</h2>
           <div className="experience-list">
             
@@ -121,7 +127,7 @@ function App() {
         </section>
 
         {/* Projects */}
-        <section className="section">
+        <section className="section" id="projects">
           <h2 className="section-title">Projects</h2>
           <h3 className="project-section-title">Current Projects</h3>
           <div className="projects-grid">
@@ -323,7 +329,7 @@ function App() {
         </section>
 
        {/* Campus Involvement */}
-        <section className="section">
+        <section className="section" id="involvement">
           <div className="section-header">
             <h2 className="section-title">Campus Involvement</h2>
           </div>
@@ -369,7 +375,7 @@ function App() {
         </section>
 
         {/* Contact */}
-        <section className="section">
+        <section className="section" id="contact">
           <div className="contact-box">
             <h2 className="section-title" style={{ textAlign: "center" }}>Let's Connect</h2>
             <p>

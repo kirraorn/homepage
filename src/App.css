@@ -37,6 +37,7 @@ body {
 /* ---------------- CONTINUOUS SCROLLING BACKGROUND ---------------- */
 .App {
   min-height: 100vh;
+  padding-top: 3.25rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -67,6 +68,41 @@ body {
   background-position: center 40%;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.55rem max(1.5rem, calc((100vw - 1100px) / 2));
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(11, 23, 18, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.top-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  color: var(--text-main);
+  background: rgba(156, 197, 165, 0.18);
+}
+
+.section[id] {
+  scroll-margin-top: 1.5rem;
 }
 
 .hero-header::before {
@@ -627,7 +663,13 @@ body {
 /* ---------------- RESPONSIVE BREAKPOINTS (MOBILE & TABLET) ---------------- */
 @media (max-width: 800px) {
   .hero-header {
-    padding: 5.5rem 1.25rem 3.5rem 1.25rem;
+    padding: 6.5rem 1.25rem 3.5rem 1.25rem;
+  }
+
+  .top-nav {
+    justify-content: center;
+    padding: 0.55rem 0.5rem;
+    white-space: nowrap;
   }
 
   .main-content {
@@ -691,6 +733,16 @@ body {
 }
 
 @media (max-width: 560px) {
+  .top-nav {
+    gap: 0.1rem;
+    padding: 0.3rem;
+  }
+
+  .top-nav a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.78rem;
+  }
+
   .projects-grid.past-projects {
     grid-template-columns: 1fr;
   }
